@@ -38,20 +38,13 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null:true|
-|image_id|text|null:true|
+|image_url|text|null:true|
 |group_id|integer|null: false , foreign_key: true|
 |user_id|integer|null: false , foreign_key: true|
 ### Association
 - belongs_to :user 
 - belongs_to :group
-- has_many :images
-## imagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|image_url|text||
-|comment_id|integer|null: false|
-### Association
-- belongs_to :comment
+
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
