@@ -1,1 +1,47 @@
-テスト
+.contents
+  .side-bar
+    .side-bar__header
+      %span  ユーザー名 
+      %span.icons
+        =link_to "", class: "side-bar__header--icon" do
+          = fa_icon"edit"
+      %span.icons
+        =link_to "", class: "side-bar__header--icon" do
+          = fa_icon"cog"
+
+    .side-bar__group
+      %div.group
+        %p.name  グループ名
+        %p.masseage  最新のメッセージ
+      テスト
+
+  .chat
+    .chat__header
+      %div.chat-group
+        %p.group-title  グループ
+        %ul.members
+          %li  member:
+      %div.edit-btn
+        %p.btn  edit  
+      
+    .chat__message
+      %span.user-name  ユーザー名
+      %span.date  日付
+      %p.message-content  内容
+      
+      
+    .chat__form
+      %form
+        %input
+        %label
+          = fa_icon 'image'
+        %input{type: 'file'}
+        %input{type: 'submit', value: 'Send'}
+      
+
+  
+    
+
+
+     
+  

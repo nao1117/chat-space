@@ -1,0 +1,41 @@
+.side-bar{
+  color:white;
+  height:100%;
+  background-color:#2f3e51;
+  width:300px;
+  float:left;
+  
+    &__header{
+    background-color:#253141;
+    height:100px;
+    font-size:16px;
+    font-weight :bold;
+    padding: 0 20px;
+    line-height:100px;
+      &--icon{
+        color:white;
+      }
+    }
+
+    &__group{
+      padding: 0 20px;
+      &--name{
+        color:black;
+      }
+    }  
+}
+
+.group{
+  box-sizing: border-box;
+  padding: 20px 0 40px;
+  .name{
+    font-weight :bold;
+    font-size:15px;
+  }
+  .masseage{
+    font-weight :bold;
+    font-size:11px; 
+    padding-top:5px;
+  }
+  
+}
