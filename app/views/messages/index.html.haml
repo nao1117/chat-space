@@ -1,16 +1,14 @@
-%div.notice  グループを作成しました
-
 .contents
   .side-bar
     .side-bar__header
       .side-bar__wrapper
-        %span  ユーザー名 
+        = current_user.name
         .side-bar__icon
           %span.icons
             =link_to "", class: "side-bar__header--icon" do
               = fa_icon "edit"
           %span.icons
-            =link_to "", class: "side-bar__header--icon" do
+            =link_to edit_user_path(current_user), class: "side-bar__header--icon" do
               = fa_icon "cog"
 
     .side-bar__group
