@@ -1,13 +1,17 @@
+%div.notice  グループを作成しました
+
 .contents
   .side-bar
     .side-bar__header
-      %span  ユーザー名 
-      %span.icons
-        =link_to "", class: "side-bar__header--icon" do
-          = fa_icon"edit"
-      %span.icons
-        =link_to "", class: "side-bar__header--icon" do
-          = fa_icon"cog"
+      .side-bar__wrapper
+        %span  ユーザー名 
+        .side-bar__icon
+          %span.icons
+            =link_to "", class: "side-bar__header--icon" do
+              = fa_icon "edit"
+          %span.icons
+            =link_to "", class: "side-bar__header--icon" do
+              = fa_icon "cog"
 
     .side-bar__group
       %div.group
@@ -21,8 +25,8 @@
         %p.group-title  グループ
         %ul.members
           %li  member:
-      %div.edit-btn
-        %p.btn  edit  
+        %div.edit-btn.clearfix
+          %p.btn  Edit  
       
     .chat__message
       %span.user-name  ユーザー名
@@ -32,16 +36,9 @@
       
     .chat__form
       %form
-        %input
-        %label
-          = fa_icon 'image'
-        %input{type: 'file'}
-        %input{type: 'submit', value: 'Send'}
-      
-
-  
-    
-
-
-     
-  
+        %input.chat__form--messeage
+        %label.fa-stack
+          = fa_icon 'image',class: "fa-stack-2x my-small"
+          %input.hidden{type: 'file'}
+        %input.chat__form--btn{type: 'submit', value: 'Send'}
+            
