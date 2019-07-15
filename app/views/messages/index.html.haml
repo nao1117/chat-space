@@ -19,7 +19,7 @@
               .name  
                 = group.name
               .masseage  
-                メッセージはまだありません。
+                = group.show_last_message
       
 
   .chat
@@ -33,16 +33,15 @@
             %p.btn  Edit  
       
     .chat__message
-      %span.user-name  ユーザー名
-      %span.date  日付
-      %p.message-content  内容
+      = render @messages
+      
       
       
     .chat__form
-      %form
-        %input.chat__form--messeage
-        %label.fa-stack
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'chat__form--messeage', placeholder: 'type a message'
+        = f.label :image, class: 'fa-stack' do
           = fa_icon 'image',class: "fa-stack-2x my-small"
-          %input.hidden{type: 'file'}
-        %input.chat__form--btn{type: 'submit', value: 'Send'}
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'chat__form--btn'
             
