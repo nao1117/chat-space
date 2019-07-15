@@ -21,28 +21,3 @@
               .masseage  
                 メッセージはまだありません。
       
-
-  .chat
-    .chat__header
-      %div.chat-group
-        %p.group-title  グループ
-        %ul.members
-          %li  member:
-        %div.edit-btn.clearfix
-          =link_to edit_user_path(current_user) do
-            %p.btn  Edit  
-      
-    .chat__message
-      %span.user-name  ユーザー名
-      %span.date  日付
-      %p.message-content  内容
-      
-      
-    .chat__form
-      %form
-        %input.chat__form--messeage
-        %label.fa-stack
-          = fa_icon 'image',class: "fa-stack-2x my-small"
-          %input.hidden{type: 'file'}
-        %input.chat__form--btn{type: 'submit', value: 'Send'}
-            

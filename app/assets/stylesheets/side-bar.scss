@@ -31,9 +31,15 @@
 
     &__group{
       padding: 0 20px;
-      &--name{
-        color:black;
+
+      a{
+        color:white;
+        text-decoration: none;
       }
+      .one-block{
+        margin-bottom: 40px;
+      }
+      
     }  
 }
 
