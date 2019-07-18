@@ -16,7 +16,6 @@ $(function(){
           </p>
           <p>
             ${image}
-            <p></p>
           </div>`
       return html;
   };
