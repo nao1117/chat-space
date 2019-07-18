@@ -2,22 +2,24 @@ $(function(){
   function buildHTML(message){
     var image = message.image ? `<img class="lower-message__image" src=${message.image}>` : "";
       var html =
-        `<div class="message-box" data-message-id=${message.id}>
-            <span class="user-name">
-              ${message.user_name}
-            </span>
-            <span class="date">
-              ${message.date}
-            </span>
-            <p class="message-content">
-            </p><p class="lower-message__content">
-              ${message.content}
-            </p>
+       `<div class="message-box" data-message-id=${message.id}>
+          <span class="user-name">
+            ${message.user_name}
+          </span>
+          <span class="date">
+            ${message.date}
+          </span>
+          <p class="message-content">
+          </p>
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+          <p>
             ${image}
             <p></p>
           </div>`
-        return html;
-     };
+      return html;
+  };
   $('.new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
