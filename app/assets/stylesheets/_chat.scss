@@ -13,6 +13,11 @@
 
     .members{
       padding-top:15px;
+      display: flex;
+
+      li{
+        padding-right: 5px;
+      }
     }
     a{
       text-decoration: none;
@@ -29,6 +34,11 @@
       width: 200px;
       height: 200px;
     }
+
+    .message-box{
+      margin-bottom: 40px;
+    }
+    
   }
 
   &__form{
@@ -36,20 +46,20 @@
   height: 70px;
   background-color:#dddddd;
   position: absolute;
-  padding: 20px 0px 20px 0px; 
+  padding: 10px 0px 10px 0px; 
   bottom: 0;
 
     &--messeage{
       height: 50px;
       width:920px;
-      margin-top: 5px;
+      margin-top: 10px;
       margin-left: 40px;
     }
 
     .fa-stack {
       position: absolute;
       right: 170px;
-      top: 40px;
+      top: 38px;
       font-size:0.7em;
     }
 

@@ -1,9 +1,10 @@
-%span.user-name  
-  = message.user.name
-%span.date 
-  = message.created_at.strftime("%Y/%m/%d %H:%M")
-%p.message-content  
-  - if message.content.present?
-    %p.lower-message__content
-      = message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+%div.message-box
+  %span.user-name 
+    = message.user.name
+  %span.date 
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
+  %p.message-content  
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+      = image_tag message.image, class: 'lower-message__image' if message.image.present?
