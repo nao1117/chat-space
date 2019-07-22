@@ -20,6 +20,35 @@ $(function(){
         </div>`
       return html;
   };
+
+  var reloadMessages = function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      var last_message_id = $('.message-box:last').data("message-id");
+      $.ajax({
+        url: 'api/messages',
+        type: 'get',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function(messages) {
+        console.log(messages);
+        var addHTML = '';
+        messages.forEach(function (message) {
+        addHTML = buildHTML(message);
+        $('.chat__message').append(addHTML);
+        })
+        $('.chat__message').animate({scrollTop: $('.chat__message')[0].scrollHeight}, 'fast');
+      })
+      
+      .fail(function() {
+        
+        alert('自動更新に失敗しました');
+        
+      });
+    }
+  };
+
+
   $('.new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -36,11 +65,12 @@ $(function(){
       var html = buildHTML(data);
       $('.chat__message').append(html);      
       $('form')[0].reset();
-      $('.chat__message').animate({scrollTop: $('.message-box')[0].scrollHeight}, 'fast');
+      $('.chat__message').animate({scrollTop: $('.chat__message')[0].scrollHeight}, 'fast');
     })
     .fail(function(){
       alert('error');
     });
     return false;
    });
+   setInterval(reloadMessages, 10000);
 });

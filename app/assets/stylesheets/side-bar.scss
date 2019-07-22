@@ -5,6 +5,7 @@
   width:300px;
   float:left;
   position: relative;
+  overflow: scroll;
 
     &__wrapper {
       display: flex;
