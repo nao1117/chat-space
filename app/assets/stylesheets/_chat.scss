@@ -51,15 +51,18 @@
 
     &--messeage{
       height: 50px;
-      width:920px;
+      width: calc(100% - 195px);
       margin-top: 10px;
       margin-left: 40px;
+      position: relative;
+      border: none;
+      
     }
 
     .fa-stack {
       position: absolute;
-      right: 170px;
-      top: 38px;
+      right:165px;
+      top: 35px;
       font-size:0.7em;
     }
 
@@ -71,8 +74,11 @@
       background-color: $sky-blue;
       color:$white;
       height: 50px;
-      margin-left: 15px;
       padding: 0 30px;
+      margin-top:10px;
+      margin-left:15px;
+      border: none;
+      position: absolute;
     }
   }
 }
