@@ -58,13 +58,13 @@ $(document).on('turbolinks:load',(function(){
   })
 
   $("#user-search-result").on("click",'.user-search-add',function(){
-    $(".user-search-add").parent(this).remove();
+    $(this).parent().remove();
   })
 
   // 削除ボタンを押した時の処理
   
-  $(".chat-group-users").on("click",'.user-search-remove',function(){
-    $(".user-search-remove").parent(this).remove();
+  $(this).on("click",'.user-search-remove',function(){
+    $(this).parent().remove();
   })
 }))
 
