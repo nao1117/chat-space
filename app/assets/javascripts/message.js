@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load',(function(){
   function buildHTML(message){
     var image = message.image ? `<img class="lower-message__image" src=${message.image}>` : "";
       var html =
@@ -72,4 +72,4 @@ $(function(){
     return false;
    });
    setInterval(reloadMessages, 5000);
-});
+}));
